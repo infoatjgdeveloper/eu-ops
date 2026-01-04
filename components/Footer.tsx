@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-slate-400 py-16 border-t border-white/5">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div className="col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-8 eu-blue rounded-md flex items-center justify-center text-white font-bold text-sm">
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             </div> */}
           </div>
 
-          <div>
+          {/* <div>
             <h4 className="text-white font-bold mb-6">Operations</h4>
             <ul className="space-y-4 text-sm">
               <li><a href="#" className="hover:text-blue-400 transition-colors">Software Engineering</a></li>
@@ -38,15 +38,15 @@ const Footer: React.FC = () => {
               <li><a href="#" className="hover:text-blue-400 transition-colors">Cloud Infrastructure</a></li>
               <li><a href="#" className="hover:text-blue-400 transition-colors">Cybersecurity</a></li>
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <h4 className="text-white font-bold mb-6">Partnership</h4>
             <ul className="space-y-4 text-sm">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">IA7 Global (Germany)</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">JG AI Ecosystem</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">GDPR Compliance</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Security Consulting</a></li>
+              {/* <li><a href="#" className="hover:text-blue-400 transition-colors">IA7 Global (Germany)</a></li> */}
+              <li><a href="https://jgai.jgdeveloper.com/" target="_blank" className="hover:text-blue-400 transition-colors">JG AI Ecosystem</a></li>
+              {/* <li><a href="#" className="hover:text-blue-400 transition-colors">GDPR Compliance</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Security Consulting</a></li> */}
             </ul>
           </div>
         </div>
