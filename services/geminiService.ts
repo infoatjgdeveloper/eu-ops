@@ -28,13 +28,20 @@ export class AIConsultant {
   async chat(message: string, history: { role: 'user' | 'model', text: string }[]) {
     try {
       const response = await this.ai.models.generateContent({
-        model: 'gemini-2.5-flash-lite',
+        model: 'models/gemma-3-12b-it',
         contents: [
-          ...history.map(h => ({ role: h.role, parts: [{ text: h.text }] })),
+          // Include system instruction as the first message if history is empty
+          ...(history.length === 0 ? [
+            { role: 'user', parts: [{ text: SYSTEM_INSTRUCTION }] },
+            { role: 'model', parts: [{ text: 'Understood. I will follow those instructions as the JG AI Consultant for EU Operations.' }] }
+          ] : []),
+          ...history.map(h => ({
+            role: h.role,
+            parts: [{ text: h.text }]
+          })),
           { role: 'user', parts: [{ text: message }] }
         ],
         config: {
-          systemInstruction: SYSTEM_INSTRUCTION,
           temperature: 0.7,
         }
       });
